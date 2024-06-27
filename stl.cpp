@@ -25,11 +25,52 @@ int main()
     vector<int> v3(v.begin(),v.end());
 
     //accessing vector
-    vector<int>::iterator it=v.begin();
+    vector<int>::iterator it = v.begin();
     it++;
     cout<<*(it)<<" ";
     it+=2;
     cout<<*(it)<<" ";
+    vector<int>::iterator itt= v.end();
+    itt--;
+    cout<<*(itt)<<" ";
+
+    // for(vector<int>::iterator a=v.begin();a!=v.end();a++)
+    // {
+    //     cout<<endl<<*a<<" ";
+    // }
+
+    //instead writing the big vector<int>::itertor a
+    //write this
+    // for(auto a=v.begin();a!=v.end();a++)
+    // {
+    //      cout<<endl<<*a<<" ";
+    // }
+
+    for(auto b:v){
+        cout<<endl<<b<<" "<<endl;
+    }
+
+    //erasing data from vector
+    v.erase(v.begin()+1);
+    for(auto b:v){
+        cout<<endl<<b<<" ";
+    }
+
+    //inserting data in vector
+    vector<int>t(2, 100);// {l00,100}
+    t.insert(t.begin(), 300); // {300, l0,10,100, 100};
+    t. insert(t.begin() + 1, 2, 10); // {300, 10, 10, 100, lee}
+    for(auto c:t){
+        cout<<endl<<c<<" ";
+    }
+
+    vector<int> copy(2,50);
+    t.insert(t.begin(),copy.begin(),copy.end());
+    for(auto c:t){
+        cout<<endl<<c<<" ";
+    }
+
+    cout<<endl<<t.size();
 
     return 0;
 }
