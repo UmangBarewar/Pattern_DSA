@@ -12,6 +12,8 @@ int main()
     // cout<<a<<endl; 
 
     //vector is dynamic in nature
+    // stores elements in contiguous memory locations, 
+    // which means all elements are stored next to each other in memory.
     vector <int> b;
     b.push_back(1);
     b.emplace_back(2);
